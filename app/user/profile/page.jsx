@@ -13,7 +13,7 @@ export default function Profile() {
         if (isLoggingOut) return;
         setIsLoggingOut(true);
         try {
-            await axios.get('/user/api/logout');
+            await axios.get('/api/auth/logout');
             toast.success('Logged out successfully');
             router.push('/login');
         } catch (error) {

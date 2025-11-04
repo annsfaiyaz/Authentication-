@@ -21,7 +21,7 @@ export async function POST(request) {
             if (!isPasswordCorrect) {
                 return NextResponse.json({ error: 'Invalid password' }, { status: 401 });
             }
-            const tokenData = { id: user._id }
+            const tokenData = { id: user._id, role: user.role }
             const token = jwt.sign(tokenData, process.env.JWT_SECRET, { expiresIn: '1d' })
             const response = NextResponse.json({ message: 'Login successful', token }, { status: 200 });
 

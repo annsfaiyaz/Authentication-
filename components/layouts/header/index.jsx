@@ -18,6 +18,7 @@ export default function Header() {
                             <Link href="/contact" className="text-tertiary hover:border-b-2 transition-colors">Contact</Link>
                         </nav> */}
                     <div className="hidden md:flex items-center gap-3">
+                        <Link href="/admin/login" className="text-tertiary border-b-2 border-tertiary px-5 py-2.5 rounded-full font-inter hover:border-transparent transition">Admin</Link>
                         <Link href="/login" className="text-tertiary border-b-2 border-tertiary px-5 py-2.5 rounded-full font-inter hover:border-transparent transition">Login</Link>
                         <Link href="/signup" className="text-tertiary border-b-2 border-tertiary px-5 py-2.5 rounded-full font-inter hover:border-transparent transition">Signup</Link>
                     </div>
@@ -48,6 +49,7 @@ export default function Header() {
                         <Link onClick={() => setMobileOpen(false)} href="/about" className="text-tertiary hover:text-tertiary transition-colors">About</Link>
                         <Link onClick={() => setMobileOpen(false)} href="/contact" className="text-tertiary hover:text-tertiary transition-colors">Contact</Link>
                         <div className="mt-2 flex flex-col gap-3">
+                            <Link onClick={() => setMobileOpen(false)} href="/admin" className="text-white bg-tertiary px-5 py-2.5 rounded-full font-inter text-center hover:opacity-90 transition">Admin</Link>
                             <Link onClick={() => setMobileOpen(false)} href="/login" className="text-white bg-tertiary px-5 py-2.5 rounded-full font-inter text-center hover:opacity-90 transition">Login</Link>
                             <Link onClick={() => setMobileOpen(false)} href="/signup" className="text-white bg-tertiary px-5 py-2.5 rounded-full font-inter text-center hover:opacity-90 transition">Signup</Link>
                         </div>
