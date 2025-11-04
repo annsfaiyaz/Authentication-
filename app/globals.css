@@ -1,7 +1,57 @@
 @import "tailwindcss";
 
+@theme inline {
+  --font-inter: "Inter", sans-serif;
+  --font-unbounded: "Unbounded", sans-serif;
+  --color-primary: #eafaea;
+  --color-secondary: #d6f5d6;
+  --color-tertiary: #0f3d0f;
+}
+
 body {
-  font-family: 'Inter', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  font-weight: 700;
+}
+
+/* Marquee utilities for horizontal, seamless scrolling rows */
+.marquee {
+  position: relative;
+  overflow: hidden;
+}
+
+.marquee__track {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  width: max-content;
+  animation: marquee-left 60s linear infinite;
+}
+
+.marquee--reverse .marquee__track {
+  animation-name: marquee-right;
+}
+
+.marquee__item {
+  flex: 0 0 auto;
+}
+
+@keyframes marquee-left {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+@keyframes marquee-right {
+  0% {
+    transform: translateX(-50%);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
 }

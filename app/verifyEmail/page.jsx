@@ -13,7 +13,7 @@ export default function VerifyEmail() {
 
     const onVerifyEmail = async (token) => {
         try {
-            await axios.post('/api/verifiedEmail', { token });
+            await axios.post('/user/api/verifiedEmail', { token });
             setVerified(true);
             setError(null);
         } catch (error) {

@@ -6,9 +6,7 @@ export function middleware(request) {
     const isPublic = path === '/login' || path === '/signup' || path === '/verifyEmail';
 
     const token = request.cookies.get('token');
-    // if (isPublic && token) {
-    //     return NextResponse.redirect(new URL('/', request.url));
-    // }
+   
     if (!isPublic && !token) {
         return NextResponse.redirect(new URL('/login', request.url));
     }
@@ -16,7 +14,6 @@ export function middleware(request) {
 
 export const config = {
     matcher: [
-        '/',
         '/login',
         '/signup',
         '/profile',

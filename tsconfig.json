@@ -30,7 +30,7 @@
     "**/*.mts",
     "**/*.ts",
     "**/*.tsx"
-, "app/verifyEmail/page.jsx"  ],
+, "app/verifyEmail/page.jsxsx"  ],
   "exclude": [
     "node_modules"
   ]

@@ -16,13 +16,13 @@ export default function Login() {
             const email = formData.get('email');
             const password = formData.get('password');
 
-            const response = await axios.post('/api/login', {
+            const response = await axios.post('/user/api/login', {
                 email,
                 password,
             });
 
             if (response.status === 200) {
-                router.push('/dashboard');
+                router.push('/user/profile');
                 return { success: true, message: response.data.message };
             }
         } catch (error) {

@@ -15,7 +15,7 @@ export default function Signup() {
             const email = formData.get('email');
             const password = formData.get('password');
 
-            const response = await axios.post('/api/signup', {
+            const response = await axios.post('/user/api/signup', {
                 name,
                 email,
                 password,
