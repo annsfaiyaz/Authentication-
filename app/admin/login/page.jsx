@@ -18,9 +18,9 @@ export default function AdminLogin() {
 
             if (response.status === 200) {
                 router.push('/admin/dashboard');
-                return { success: true, message: 'Login successful' };
+                return { success: true, message: response.data.message };
             } else {
-                return { success: false, error: response.data.error || 'Invalid credentials' };
+                return { success: false || 'Invalid credentials' };
             }
         } catch (error) {
             const errMsg = error.response?.data?.error || 'Something went wrong';

@@ -14,6 +14,7 @@ export async function POST(request) {
             return NextResponse.json({ error: 'Admin not found' }, { status: 404 });
         }
             const isPasswordCorrect = await bcrypt.compare(password, user.password);
+           
             if (!isPasswordCorrect) {
                 return NextResponse.json({ error: 'Invalid password' }, { status: 401 });
             }
